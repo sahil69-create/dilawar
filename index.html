@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,17 +12,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-theme="light">
 
-<div id="intro">
+<canvas id="bg-canvas"></canvas>
+
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
+<div id="intro" style="opacity: 0;">
 <div class="main">
     <div class="card">
 
         <!-- TOP TAGS -->
         <div class="top-tags">
             <span class="dot">● SYSTEM READY</span>
-            <span>PORTFOLIO 2025</span>
-            <span>UI LOADING</span>
+            <span>PORTFOLIO 2026</span>
+            <span>v2.0 RESPONSIVE</span>
         </div>
 
         <div class="content">
@@ -102,24 +108,34 @@
         <div class="div-list ">
             <ul class="ul-list">
                 <li class="active">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <a href="#home">Home</a>
+                    <a href="#home">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>Home</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-regular fa-address-card"></i>
-                    <a href="#about">About</a>
+                    <a href="#about">
+                        <i class="fa-regular fa-address-card"></i>
+                        <span>About</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-regular fa-folder-open"></i>
-                    <a href="#project">Projects</a>
+                    <a href="#project">
+                        <i class="fa-regular fa-folder-open"></i>
+                        <span>Projects</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-solid fa-code"></i>
-                    <a href="#service">services</a>
+                    <a href="#service">
+                        <i class="fa-solid fa-code"></i>
+                        <span>services</span>
+                    </a>
                 </li>
                 <li>
-                    <i class="fa-regular fa-envelope"></i>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -135,9 +151,7 @@
                 <h1>Hi, I'm Dilawar</h1>
                 <h3>Python Expert & Security Analyst</h3>
                 <div class="info-p">
-                   <p>I build advanced Python bots, secure web applications, and </p>
-                   <p>optimize network communication. With a deep understanding </p>
-                   <p>of client-server protocols, I bring robust solutions to life.</p>
+                   <p>I build advanced Python bots, secure web applications, and optimize network communication. With a deep understanding of client-server protocols, I bring robust solutions to life.</p>
                 </div>
                 <div class="info-p2">
                     <p><i class="fa-solid fa-location-dot"></i> Based in Hisar, Haryana</p>
@@ -155,7 +169,7 @@
                     <ul>
                         <li><a href="https://github.com/dkonlycomputer"><i class="fa-brands fa-github"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/dilawar-khan-41b324285/"><a href="https://www.linkedin.com/in/dilawar-khan-41b324285/"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/dilawar-khan-41b324285/"><i class="fa-brands fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
                 </div>
@@ -200,8 +214,7 @@
         <h1>Featured Work</h1>
         <hr>
         <div class="info-pro">
-            <p>A showcase of my recent projects demonstrating expertise in full-stack </p>
-            <p>development, modern frameworks, and creative problem-solving.</p>
+            <p>A showcase of my recent projects demonstrating expertise in full-stack development, modern frameworks, and creative problem-solving.</p>
         </div>
         <div class="projects-container">
 
