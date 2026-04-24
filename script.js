@@ -195,3 +195,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ================= CONTACT FORM TO GOOGLE SHEETS =================
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = {
+            name: this.querySelector('input[name="name"]').value,
+            email: this.querySelector('input[name="email"]').value,
+            message: this.querySelector('textarea[name="message"]').value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbxb0AoOSnfrMjRM2MR0poNFfWwNCilp5ViMMhT_s2-BlCpedwSNrdIO4YEuykNYWx1u1g/exec", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert("✅ Message sent successfully!");
+            contactForm.reset();
+        })
+        .catch(err => {
+            alert("❌ Error sending message");
+            console.error(err);
+        });
+    });
+}
