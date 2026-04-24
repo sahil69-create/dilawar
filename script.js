@@ -203,18 +203,17 @@ if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const formData = {
-            name: this.querySelector('input[name="name"]').value,
-            email: this.querySelector('input[name="email"]').value,
-            message: this.querySelector('textarea[name="message"]').value
-        };
+        const formData = new FormData();
+        formData.append("name", this.querySelector('input[name="name"]').value);
+        formData.append("email", this.querySelector('input[name="email"]').value);
+        formData.append("message", this.querySelector('textarea[name="message"]').value);
 
         fetch("https://script.google.com/macros/s/AKfycbxb0AoOSnfrMjRM2MR0poNFfWwNCilp5ViMMhT_s2-BlCpedwSNrdIO4YEuykNYWx1u1g/exec", {
             method: "POST",
-            body: JSON.stringify(formData)
+            mode: "no-cors",   // ✅ Yeh zaroori hai Google Scripts ke liye
+            body: formData     // ✅ JSON ki jagah FormData bhejo
         })
-        .then(res => res.json())
-        .then(data => {
+        .then(() => {
             alert("✅ Message sent successfully!");
             contactForm.reset();
         })
