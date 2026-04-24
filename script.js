@@ -1,5 +1,3 @@
-
-
 // Theme Management
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
@@ -204,14 +202,14 @@ if (contactForm) {
         e.preventDefault();
 
         const formData = new FormData();
-        formData.append("name", this.querySelector('input[name="name"]').value);
-        formData.append("email", this.querySelector('input[name="email"]').value);
+        formData.append("name", this.querySelector('input[name="user_name"]').value);
+        formData.append("email", this.querySelector('input[name="user_email"]').value);
         formData.append("message", this.querySelector('textarea[name="message"]').value);
 
         fetch("https://script.google.com/macros/s/AKfycbxb0AoOSnfrMjRM2MR0poNFfWwNCilp5ViMMhT_s2-BlCpedwSNrdIO4YEuykNYWx1u1g/exec", {
             method: "POST",
-            mode: "no-cors",   // ✅ Yeh zaroori hai Google Scripts ke liye
-            body: formData     // ✅ JSON ki jagah FormData bhejo
+            mode: "no-cors",
+            body: formData
         })
         .then(() => {
             alert("✅ Message sent successfully!");
