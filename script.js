@@ -206,7 +206,7 @@ if (contactForm) {
         formData.append("email", this.querySelector('input[name="user_email"]').value);
         formData.append("message", this.querySelector('textarea[name="message"]').value);
 
-        fetch("https://script.google.com/macros/s/AKfycbxb0AoOSnfrMjRM2MR0poNFfWwNCilp5ViMMhT_s2-BlCpedwSNrdIO4YEuykNYWx1u1g/exec", {
+        fetch("https://script.google.com/macros/library/d/1HWcb2_IguUUta15052IiZYl-6zSLquMIOFnUHVAft2QkxIqS3lxTSysL/2", {
             method: "POST",
             mode: "no-cors",
             body: formData
