@@ -126,12 +126,12 @@ window.addEventListener("load", () => {
 
     const animations = [
         { selector: ".top-tags", class: "from-top", delay: 0 },
-        { selector: ".left h1", class: "from-left", delay: 0.3 },
-        { selector: ".desc", class: "from-left", delay: 0.6 },
-        { selector: ".buttons", class: "zoom-in", delay: 1.2 },
-        { selector: ".site-link", class: "from-bottom", delay: 1.5 },
-        { selector: ".right", class: "from-right", delay: 0.6 },
-        { selector: ".stats", class: "from-bottom", delay: 1.8 },
+        { selector: ".left h1", class: "from-left", delay: 0.15 },
+        { selector: ".desc", class: "from-left", delay: 0.3 },
+        { selector: ".buttons", class: "zoom-in", delay: 0.6 },
+        { selector: ".site-link", class: "from-bottom", delay: 0.75 },
+        { selector: ".right", class: "from-right", delay: 0.3 },
+        { selector: ".stats", class: "from-bottom", delay: 0.9 },
     ];
 
     animations.forEach(item => {
@@ -152,7 +152,7 @@ window.addEventListener("load", () => {
             site.style.display = "block";
             initScrollAnimations(); 
         }, 1200);
-    }, 4000);
+    }, 2000);
 });
 
 function initScrollAnimations() {
