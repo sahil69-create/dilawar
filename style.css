@@ -1056,20 +1056,29 @@ header {
 
     .ul-list {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 1px;
-        padding: 8px 50px 8px 8px; /* space for theme toggle */
+        justify-content: space-between;
+        gap: 4px;
+        padding: 8px 16px;
         border-radius: 0;
         border-top: none;
         border-left: none;
         border-right: none;
     }
+
+    .mobile-theme-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     .theme-toggle {
-        top: 8px;
-        right: 8px;
+        position: static;
         width: 38px;
         height: 38px;
+        background: var(--text-main);
+        color: var(--bg-body);
+        border-radius: 12px;
+        border: none;
     }
 
 
@@ -1221,4 +1230,8 @@ header {
     opacity: 0;
     pointer-events: none;
     transform: translateY(-20px) scale(0.9);
+}
+
+.mobile-theme-item {
+    display: contents;
 }
