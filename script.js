@@ -174,6 +174,11 @@ window.addEventListener("scroll", () => {
         }
     });
 
+    // Check if scrolled to bottom to activate last section
+    if (window.innerHeight + Math.ceil(window.scrollY) >= document.documentElement.scrollHeight - 10) {
+        current = sections[sections.length - 1].getAttribute("id");
+    }
+
     navItems.forEach(item => {
         item.classList.remove("active");
         const link = item.querySelector("a");
