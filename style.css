@@ -541,7 +541,9 @@ header {
 .home img {
     width: 100%;
     max-width: 420px;
-    border-radius: 24px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     box-shadow: var(--card-hover-shadow);
 }
 
