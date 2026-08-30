@@ -1171,3 +1171,52 @@ header {
     transform: translateY(30px);
     transition: all 0.8s ease;
 }
+
+/* Interactive Card Details */
+.project-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card-details {
+  display: none;
+  margin-top: 15px;
+  text-align: left;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.card-details h4 {
+  font-size: 15px;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+.card-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.card-details ul li {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+}
+.card-details ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+.project-card.expanded .card-details {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
