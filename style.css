@@ -298,18 +298,11 @@ h1, h2, h3, h4, h5, h6 {
 /* NAVIGATION */
 header {
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: auto;
     z-index: 1000;
-}
-
-@media (min-width: 768px) {
-    header {
-        top: 20px;
-        bottom: auto;
-    }
 }
 
 .div-list {
@@ -1055,8 +1048,7 @@ header {
         width: min(100%, 94vw);
         left: 50%;
         transform: translateX(-50%);
-        bottom: 16px;
-        top: auto;
+        top: 16px;
     }
 
     .ul-list {
