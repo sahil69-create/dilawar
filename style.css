@@ -643,6 +643,7 @@ header {
     grid-template-columns: 1fr;
     gap: 24px;
     width: 100%;
+    align-items: start;
 }
 
 @media (min-width: 640px) {
