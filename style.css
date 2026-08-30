@@ -435,6 +435,7 @@ header {
         flex-direction: row;
         gap: 4rem;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
