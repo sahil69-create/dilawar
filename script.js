@@ -25,6 +25,23 @@ function updateThemeIcon(theme) {
     }
 }
 
+// Smart Theme Toggle (Hide after 2s of inactivity)
+let themeScrollTimeout = setTimeout(() => {
+    themeToggle.classList.add('hidden');
+}, 2000);
+window.addEventListener('scroll', () => {
+    // Show button when scrolling starts
+    themeToggle.classList.remove('hidden');
+    
+    // Clear previous timeout
+    clearTimeout(themeScrollTimeout);
+    
+    // Hide button after 2 seconds of scroll inactivity
+    themeScrollTimeout = setTimeout(() => {
+        themeToggle.classList.add('hidden');
+    }, 2000);
+});
+
 // Background Animation (Canvas)
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
